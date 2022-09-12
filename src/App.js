@@ -1,16 +1,30 @@
 import './App.css';
+import {Route, Routes} from "react-router"
+
+//components
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
+
+//pages
+import Home from "./pages/Home/index";
+import About from "./pages/About/About";
+import Products from "./pages/Products/Products";
+import CartPage from "./pages/Cart Page/CartPage";
+import Contact from "./pages/Contact/Contact"
 
 function App() {
   return (
     <div className="App">
       <Header/>
       <Navbar/>
-
-
-
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/products' element={<Products/>}/>
+        <Route path='/cartpage' element={<CartPage/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+      </Routes>
       <Footer/>
       {/* Header component */}
       {/* Navbar component Multiple lists and droipdown menus */}
