@@ -1,0 +1,17 @@
+.navbar-container{
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    grid-gap: 30px;
+    align-items: center;   
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.navbar-link{
+    font-family: var(--link-font);
+    font-size: var(--subtitle-size);
+    color: var(--primary-color);
+    text-decoration: none;
+}

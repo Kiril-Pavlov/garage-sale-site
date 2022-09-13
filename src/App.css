@@ -4,3 +4,16 @@
   margin: 0px;
 }
 
+:root{
+  --primary-color:orange;
+  --secondary-color:gray;
+
+  --title-font:'Rubik Moonrocks', cursive;
+  --text-font:'Marcellus', serif;
+  --link-font:'Fredoka One', cursive;
+
+  --text-size:1rem;
+  --title-size:3rem;
+  --subtitle-size:1.5rem;
+}
+
