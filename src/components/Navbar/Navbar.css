@@ -1,5 +1,5 @@
 .navbar-container{
-    background-color: var(--secondary-color);
+    background-color: black;
     text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -7,6 +7,8 @@
     align-items: center;   
     justify-content: center;
     padding: 10px 20px;
+    border-top: 1px dotted var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .navbar-link{
@@ -14,4 +16,10 @@
     font-size: var(--subtitle-size);
     color: var(--primary-color);
     text-decoration: none;
+    transition: all .5s;
+}
+
+.navbar-link:hover{
+    text-shadow: 5px 5px 25px white;
+    cursor: pointer;
 }
