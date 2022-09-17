@@ -3,17 +3,10 @@ import { Link } from 'react-router-dom';
 
 import "./Navbar.css"
 
-const Navbar = () => {
-  const linksList = [
-    { linkTo: "/", linkName: "Home" },
-    { linkTo: "/about", linkName: "About" },
-    { linkTo: "/products", linkName: "Products" },
-    { linkTo: "/cartpage", linkName: "Cart" },
-    { linkTo: "/contact", linkName: "Contact" },
-  ];
+const Navbar = ({links}) => {
   return (
     <div className='navbar-container'>
-      {linksList.map((item) => {
+      {links.map((item) => {
         return (
           <Link to={item.linkTo} className='navbar-link'>
             <div >

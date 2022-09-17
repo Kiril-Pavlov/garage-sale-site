@@ -14,10 +14,17 @@ import CartPage from "./pages/Cart Page/CartPage";
 import Contact from "./pages/Contact/Contact"
 
 function App() {
+  const linksList = [
+    { linkTo: "/", linkName: "Home" },
+    { linkTo: "/about", linkName: "About" },
+    { linkTo: "/products", linkName: "Products" },
+    { linkTo: "/cartpage", linkName: "Cart" },
+    { linkTo: "/contact", linkName: "Contact" },
+  ];
   return (
     <div className="App">
       <Header/>
-      <Navbar/>
+      <Navbar links = {linksList}/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
@@ -25,7 +32,7 @@ function App() {
         <Route path='/cartpage' element={<CartPage/>}/>
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
-      <Footer/>
+      <Footer  links = {linksList}/>
       {/* Header component */}
       {/* Navbar component Multiple lists and droipdown menus */}
       {/* Hero carousel component with 3 most sold products */}
