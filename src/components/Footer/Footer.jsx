@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 import "./Footer.css"
 
+import {SiYoutube, SiTwitter, SiInstagram, SiFacebook} from "react-icons/si"
+
 const Footer = ({ links }) => {
   return (
     <div className='footer-container'>
@@ -37,12 +39,10 @@ const Footer = ({ links }) => {
           </ul>
         </div>
         <div className='social-networks'>
-          <ul>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Twitter</li>
-            <li>Youtube</li>
-          </ul>
+            <a href='https://www.facebook.com/'><SiFacebook size={30} color={"#CBB26A"}/></a>
+            <a href='https://www.instagram.com/'><SiInstagram size={30}  color={"#CBB26A"}/></a>
+            <a href='https://www.twitter.com/'><SiTwitter size={30}  color={"#CBB26A"}/></a>
+            <a href='https://www.youtube.com/'><SiYoutube size={30}  color={"#CBB26A"}/></a>
         </div>
       </div>
       <div className='copyright-footer-container'>

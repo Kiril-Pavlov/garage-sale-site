@@ -55,6 +55,18 @@
     margin-bottom: 5px;
 }
 
+.social-networks{
+    
+    display: flex;
+    flex-direction: row;
+    grid-gap: 20px;
+}
+
+.social-networks a{
+    fill: var(--primary-color);
+    size: 50;
+}
+
 .copyright-footer-container{
     text-align: center;
     font-size: 1.3rem;
