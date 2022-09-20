@@ -56,7 +56,6 @@
 }
 
 .social-networks{
-    
     display: flex;
     flex-direction: row;
     grid-gap: 20px;
