@@ -10,7 +10,7 @@ const CartContext=createContext();
 const CartProvider = ({children}) =>{
     const [cartItems, setCartItems] = useState({});
 
-    const value = { garageSaleItems, cartItems, addToCart, removeFromCart, emptyCart };
+    const value = { garageSaleItems };
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
 
