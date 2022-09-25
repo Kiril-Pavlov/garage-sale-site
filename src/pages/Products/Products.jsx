@@ -1,13 +1,26 @@
 import React,{useContext} from 'react'
-import {CartContext} from "../../context/cartContext"
+// import {CartContext} from "../../context/cartContext"
+
+import { productList } from '../../testData/productList'
+
 
 import "./Products.css"
 
 const Products = () => {
-  const {productList} = useContext(CartContext);
+  // const {productList} = useContext(CartContext);
+
+  console.log(productList)
 
   return (
-    <div>Products</div>
+    <div>
+      {productList.map((item) => {
+        return (
+          <div className='product-item'>
+            {item.name}
+          </div>
+        )
+      })}
+    </div>
   )
 }
 
