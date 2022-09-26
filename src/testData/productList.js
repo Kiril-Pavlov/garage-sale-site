@@ -1,9 +1,11 @@
+import toolboxImg from "../assets/toolbox.png"
+
 export const productList = [
     {
         id:"1",
         name:"Toolbox",
         description:"Toolbox in good shape. Only 3 pisces mising.",
-        img: "urlhere",
+        img: toolboxImg,
         price: "29",
         datePosted: "date",
         promotion: true,
