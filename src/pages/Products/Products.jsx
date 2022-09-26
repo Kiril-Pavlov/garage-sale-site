@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React, { useContext } from 'react'
 // import {CartContext} from "../../context/cartContext"
 
 import { productList } from '../../testData/productList'
@@ -12,15 +12,19 @@ const Products = () => {
   console.log(productList)
 
   return (
-    <div>
-      {productList.map((item) => {
-        return (
-          <div className='product-item' key={item.id}>
-            <img src={item.img} alt={item.id} />
-            {item.name}
-          </div>
-        )
-      })}
+    <div className='products-page-container'>
+      <div className='products-container'>
+        {productList.map((item) => {
+          return (
+            <div className='product-item-container' key={item.id}>
+              <img src={item.img} alt={item.id} />
+              <div className='product-name'>{item.name}</div>
+              <div className='product-description'>{item.description}</div>
+              <div className='product-price'>${item.price}</div>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
