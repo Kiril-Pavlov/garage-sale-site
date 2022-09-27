@@ -20,7 +20,10 @@ const Products = () => {
               <img src={item.img} alt={item.id} />
               <div className='product-name'>{item.name}</div>
               <div className='product-description'>{item.description}</div>
-              <div className='product-price'>${item.price}</div>
+              <div className='price-add-to-cart-container'>
+                <div className='product-price'>${item.price}</div>
+                <button className='product-add-button'> ADD TO CART</button>
+              </div>
             </div>
           )
         })}

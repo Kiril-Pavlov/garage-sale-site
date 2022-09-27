@@ -1,4 +1,7 @@
-import toolboxImg from "../assets/toolbox.png"
+import toolboxImg from "../assets/toolbox.jfif"
+import guitarImg from "../assets/guitar.jfif"
+import rockingChairImg from "../assets/rocking-chair.jfif"
+import vynilRecordsImg from "../assets/vynil-records.jfif"
 
 export const productList = [
     {
@@ -6,7 +9,7 @@ export const productList = [
         name:"Toolbox",
         description:"Toolbox in good shape. Only 3 pisces mising.",
         img: toolboxImg,
-        price: "29",
+        price: 29,
         datePosted: "date",
         promotion: true,
         tags: ["tools","garage","hardware"]
@@ -15,8 +18,8 @@ export const productList = [
         id:"2",
         name:"Guitar",
         description:"Guitar in playng shape.",
-        img: "urlhere",
-        price: "10.00",
+        img: guitarImg,
+        price: 10,
         datePosted: "date",
         promotion: false,
         tags: ["instrument","music"]
@@ -25,8 +28,8 @@ export const productList = [
         id:"3",
         name:"Rocking Chair",
         description:"Wooden rocking chair.",
-        img: "urlhere",
-        price: "19",
+        img: rockingChairImg,
+        price: 19,
         datePosted: "date",
         promotion: true,
         tags: ["furniture","living room","house"]
@@ -35,8 +38,8 @@ export const productList = [
         id:"4",
         name:"Vinyl Records",
         description:"Rock collection of over 50 vinyl records.",
-        img: "urlhere",
-        price: "50",
+        img: vynilRecordsImg,
+        price: 50,
         datePosted: "date",
         promotion: true,
         tags: ["music"]
