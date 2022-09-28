@@ -2,6 +2,8 @@ import toolboxImg from "../assets/toolbox.jfif"
 import guitarImg from "../assets/guitar.jfif"
 import rockingChairImg from "../assets/rocking-chair.jfif"
 import vynilRecordsImg from "../assets/vynil-records.jfif"
+import comicsImg from "../assets/comics.jfif"
+
 
 export const productList = [
     {
@@ -43,5 +45,15 @@ export const productList = [
         datePosted: "date",
         promotion: true,
         tags: ["music"]
+    },
+    {
+        id:"5",
+        name:"Old comics collection",
+        description:"10 Marvel comics first edition.",
+        img: comicsImg,
+        price: 150,
+        datePosted: "date",
+        promotion: true,
+        tags: ["comics", "books"]
     }
 ]

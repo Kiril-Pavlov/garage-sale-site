@@ -13,6 +13,13 @@ const Products = () => {
 
   return (
     <div className='products-page-container'>
+      <div className='products-search-container'>
+        <input type="text" placeholder='Search'/>
+      </div>
+      <div className='products-filters-container'>
+        {/* order by price,date
+        tags */}
+      </div>
       <div className='products-container'>
         {productList.map((item) => {
           return (
