@@ -3,6 +3,22 @@
     padding: 15px 10%;
 }
 
+.products-filtering-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 5%;
+}
+
+.products-search-container input{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 5px 20px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+}
+
 .products-container{
     display: grid;
     grid-template-columns: repeat(4,1fr);

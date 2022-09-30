@@ -8,11 +8,11 @@ import { productList } from '../../testData/productList'
 import "./Products.css"
 
 const Products = () => {
-  const [searchInput,setSearchInput] = useState("")
+  const [searchInput, setSearchInput] = useState("")
   // const {productList} = useContext(CartContext);
 
   console.log(productList)
-  
+
   const handleSearchInput = (e) => {
     setSearchInput(e.target.value)
   }
@@ -22,12 +22,16 @@ const Products = () => {
 
   return (
     <div className='products-page-container'>
-      <div className='products-search-container'>
-        <input type="text" placeholder='Search' value={searchInput} onChange={handleSearchInput}/>
-      </div>
-      <div className='products-filters-container'>
-        {/* order by price,date
-        tags */}
+      <div className='products-filtering-container'>
+        <div className='products-search-container'>
+          <input type="text" placeholder='Search' value={searchInput} onChange={handleSearchInput} />
+        </div>
+        <div className='products-filters-container'>
+          <select name="" id="">
+            <option value=""></option>
+          </select>
+          tags date price
+        </div>
       </div>
       <div className='products-container'>
         {productList.filter(product => (product.name.toLowerCase().includes(searchInput))).map((item) => {
