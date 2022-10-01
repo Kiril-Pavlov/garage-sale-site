@@ -8,7 +8,9 @@ import { productList } from '../../testData/productList'
 import "./Products.css"
 
 const Products = () => {
-  const [searchInput, setSearchInput] = useState("")
+  const [searchInput, setSearchInput] = useState("");
+  const [minPrice,setMinPrice] = useState(0);
+  const [maxPrice,setMaxPrice] = useState(Infinity)
   // const {productList} = useContext(CartContext);
 
   console.log(productList)
@@ -17,8 +19,22 @@ const Products = () => {
     setSearchInput(e.target.value)
   }
 
+  const searchFilterProducts = (product) => (
+    product.name.toLowerCase().includes(searchInput)
+  )
+  
 
+  const handleMinPrice = (e) => {
+    setMinPrice(e.target.value);
+  }
 
+  const handleMaxPrice = (e) => {
+    setMaxPrice(e.target.value);
+  }
+  // const filter = items.filter((item) => item.price > 10);
+  const minmaxFilterProducts = (product) => (
+    product.price >minPrice && product.price<maxPrice
+  )
 
   return (
     <div className='products-page-container'>
@@ -36,7 +52,7 @@ const Products = () => {
                 Minimum price:
               </div>
               <div className='minimum-price-value'>
-                <input type="text" />
+                <input type="text" value={minPrice} onChange={handleMinPrice}/>
               </div>
             </div>
             <div className='minimum-price'>
@@ -44,7 +60,7 @@ const Products = () => {
                 Maximum price:
               </div>
               <div className='minimum-price-value'>
-                <input type="text" />
+                <input type="text" value={maxPrice} onChange={handleMaxPrice}/>
               </div>
             </div>
           </div>
@@ -52,7 +68,7 @@ const Products = () => {
         </div>
       </div>
       <div className='products-container'>
-        {productList.filter(product => (product.name.toLowerCase().includes(searchInput))).map((item) => {
+        {productList.filter(searchFilterProducts).filter(minmaxFilterProducts).map((item) => {
           return (
             <div className='product-item-container' key={item.id}>
               <img src={item.img} alt={item.id} />
