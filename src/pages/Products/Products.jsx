@@ -27,9 +27,27 @@ const Products = () => {
           <input type="text" placeholder='Search' value={searchInput} onChange={handleSearchInput} />
         </div>
         <div className='products-filters-container'>
-          <select name="" id="">
+          {/* <select name="" id="">
             <option value=""></option>
-          </select>
+          </select> */}
+          <div className='products-price-range'>
+            <div className='minimum-price'>
+              <div className='minimum-price-text'>
+                Minimum price:
+              </div>
+              <div className='minimum-price-value'>
+                <input type="text" />
+              </div>
+            </div>
+            <div className='minimum-price'>
+            <div className='minimum-price-text'>
+                Maximum price:
+              </div>
+              <div className='minimum-price-value'>
+                <input type="text" />
+              </div>
+            </div>
+          </div>
           tags date price
         </div>
       </div>
