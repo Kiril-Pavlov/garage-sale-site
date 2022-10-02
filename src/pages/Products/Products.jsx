@@ -9,8 +9,8 @@ import "./Products.css"
 
 const Products = () => {
   const [searchInput, setSearchInput] = useState("");
-  const [minPrice,setMinPrice] = useState(0);
-  const [maxPrice,setMaxPrice] = useState(Infinity)
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(Infinity)
   // const {productList} = useContext(CartContext);
 
   console.log(productList)
@@ -22,7 +22,7 @@ const Products = () => {
   const searchFilterProducts = (product) => (
     product.name.toLowerCase().includes(searchInput)
   )
-  
+
 
   const handleMinPrice = (e) => {
     setMinPrice(e.target.value);
@@ -33,7 +33,7 @@ const Products = () => {
   }
   // const filter = items.filter((item) => item.price > 10);
   const minmaxFilterProducts = (product) => (
-    product.price >minPrice && product.price<maxPrice
+    product.price > minPrice && product.price < maxPrice
   )
 
   return (
@@ -43,28 +43,34 @@ const Products = () => {
           <input type="text" placeholder='Search' value={searchInput} onChange={handleSearchInput} />
         </div>
         <div className='products-filters-container'>
-          {/* <select name="" id="">
-            <option value=""></option>
-          </select> */}
           <div className='products-price-range'>
             <div className='minimum-price'>
               <div className='minimum-price-text'>
                 Minimum price:
               </div>
               <div className='minimum-price-value'>
-                <input type="text" value={minPrice} onChange={handleMinPrice}/>
+                <input type="text" value={minPrice} onChange={handleMinPrice} />
               </div>
             </div>
             <div className='minimum-price'>
-            <div className='minimum-price-text'>
+              <div className='minimum-price-text'>
                 Maximum price:
               </div>
               <div className='minimum-price-value'>
-                <input type="text" value={maxPrice} onChange={handleMaxPrice}/>
+                <input type="text" value={maxPrice} onChange={handleMaxPrice} />
               </div>
             </div>
           </div>
-          tags date price
+          {/* sort by price and date */}
+        </div>
+        <div className='products-sort-container'>
+          <select name="Sort by" id="">
+            <option value="default">Order by</option>
+            <option value="">Price (ASC)</option>
+            <option value="">Price (DESC)</option>
+            <option value="">Date adde(ASC)</option>
+            <option value="">Date added(DESC)</option>
+          </select>
         </div>
       </div>
       <div className='products-container'>

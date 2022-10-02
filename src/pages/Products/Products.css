@@ -5,7 +5,7 @@
 
 .products-filtering-container{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 5%;
 }
 
@@ -21,19 +21,28 @@
 }
 
 .products-filters-container{
-    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .products-price-range{
     border: 1px dotted black;
     display: flex;
     flex-direction: row;
-    grid-gap: 2%;
+    grid-gap: 15%;
+    width: 450px;
+    padding: 5px 20px;
+    border-radius: 30px;
+}
+
+.products-price-range input{
+    width: 50px;
 }
 
 .minimum-price{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 5fr 1fr;
     grid-gap: 2%;
 }
 
