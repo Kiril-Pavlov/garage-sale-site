@@ -10,7 +10,8 @@ import "./Products.css"
 const Products = () => {
   const [searchInput, setSearchInput] = useState("");
   const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(Infinity)
+  const [maxPrice, setMaxPrice] = useState(Infinity);
+  const [sortChoise,setSortChoise] = useState("");
   // const {productList} = useContext(CartContext);
 
   console.log(productList)
@@ -35,6 +36,19 @@ const Products = () => {
   const minmaxFilterProducts = (product) => (
     product.price > minPrice && product.price < maxPrice
   )
+
+  const handleSortChange = (e) => {
+    setSortChoise(e.target.value)
+  }
+
+  const changeSorting = () =>{
+    if(sortChoise === "priceAsc"){
+      return(
+        (a,b)=>a.price-b.price
+      )
+    }
+  }
+
 
   return (
     <div className='products-page-container'>
@@ -64,17 +78,33 @@ const Products = () => {
           {/* sort by price and date */}
         </div>
         <div className='products-sort-container'>
-          <select name="Sort by" id="">
+          <select name="Sort by" id="" onChange={handleSortChange}>
             <option value="default">Order by</option>
-            <option value="">Price (ASC)</option>
-            <option value="">Price (DESC)</option>
-            <option value="">Date adde(ASC)</option>
-            <option value="">Date added(DESC)</option>
+            <option value="priceAsc">Price (ASC)</option>
+            <option value="priceDesc">Price (DESC)</option>
+            <option value="nameAsc">Name(ASC)</option>
+            <option value="nameDesc">Name(DESC)</option>
           </select>
         </div>
       </div>
       <div className='products-container'>
-        {productList.filter(searchFilterProducts).filter(minmaxFilterProducts).map((item) => {
+        {productList.filter(searchFilterProducts)
+                    .filter(minmaxFilterProducts)
+                    .sort(sortChoise === "priceAsc" ? 
+                          (a,b)=>a.price-b.price:
+                          sortChoise ==="priceDesc" ?
+                          (a,b)=>b.price-a.price :
+                          sortChoise ==="nameAsc" ?
+                          (a,b) => {
+                            if(a.name.toLowerCase()<b.name.toLowerCase()){return -1}
+                          } : 
+                          sortChoise ==="nameDesc" ?
+                          (a,b) => {
+                            if(a.name.toLowerCase()<b.name.toLowerCase()){return 1}
+                          }:
+                          (a,b)=>a.price-b.price
+                          )
+                    .map((item) => {
           return (
             <div className='product-item-container' key={item.id}>
               <img src={item.img} alt={item.id} />
