@@ -82,8 +82,7 @@ const Products = () => {
             <option value="default">Order by</option>
             <option value="priceAsc">Price (ASC)</option>
             <option value="priceDesc">Price (DESC)</option>
-            <option value="nameAsc">Name(ASC)</option>
-            <option value="nameDesc">Name(DESC)</option>
+            <option value="nameAsc">Name</option>
           </select>
         </div>
       </div>
@@ -98,12 +97,8 @@ const Products = () => {
                           (a,b) => {
                             if(a.name.toLowerCase()<b.name.toLowerCase()){return -1}
                           } : 
-                          sortChoise ==="nameDesc" ?
-                          (a,b) => {
-                            if(a.name.toLowerCase()<b.name.toLowerCase()){return 1}
-                          }:
                           (a,b)=>a.price-b.price
-                          )
+                    )
                     .map((item) => {
           return (
             <div className='product-item-container' key={item.id}>
