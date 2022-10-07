@@ -3,6 +3,8 @@ import guitarImg from "../assets/guitar.jfif"
 import rockingChairImg from "../assets/rocking-chair.jfif"
 import vynilRecordsImg from "../assets/vynil-records.jfif"
 import comicsImg from "../assets/comics.jfif"
+import archeryImg from "../assets/archery-set.jfif"
+import bookshelfImg from "../assets/bookshelf.jfif"
 
 
 export const productList = [
@@ -55,5 +57,25 @@ export const productList = [
         datePosted: "date",
         promotion: true,
         tags: ["comics", "books"]
+    },
+    {
+        id:"6",
+        name:"Archery set",
+        description:"Barely used archery set.",
+        img: archeryImg,
+        price: 90,
+        datePosted: "date",
+        promotion: false,
+        tags: ["sport", "outdoor"]
+    },
+    {
+        id:"7",
+        name:"Bookshelf",
+        description:"Mahagony bookshelf with 7 levels.",
+        img: bookshelfImg,
+        price: 110,
+        datePosted: "date",
+        promotion: false,
+        tags: ["furniture", "indoor"]
     }
 ]
