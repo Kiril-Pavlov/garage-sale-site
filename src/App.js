@@ -23,7 +23,7 @@ function App() {
   ];
   return (
     <div className="App">
-      <Header/>
+      <Header links = {linksList}/>
       <Navbar links = {linksList}/>
       <Routes>
         <Route path='/' element={<Home/>}/>
