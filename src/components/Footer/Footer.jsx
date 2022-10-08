@@ -21,8 +21,8 @@ const Footer = ({ links }) => {
         <div className='site-map'>
           {links.map((item) => {
             return (
-              <Link to={item.linkTo} className='footer-link'>
-                <div >
+              <Link to={item.linkTo} className='footer-link'  key={item.linkName}>
+                <div>
                   {item.linkName}
                 </div>
               </Link>

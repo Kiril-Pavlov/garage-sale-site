@@ -23,3 +23,9 @@
     text-shadow: 5px 5px 25px white;
     cursor: pointer;
 }
+
+@media screen and (max-width:992px){
+    .navbar-container{
+        display: none;
+    }
+}
