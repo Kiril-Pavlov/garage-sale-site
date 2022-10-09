@@ -1,0 +1,78 @@
+.hero-container{
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.hero-logo-left{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content-right{
+    background-image: url("../../../../assets/hero-bg.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 20px 20px 20px black;
+}
+
+.hero-content-right h1{
+    font-family: var(--link-font);
+    color: var(--primary-color);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    padding: 20px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.hero-content-right h2{
+    font-family: var(--text-font);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    padding: 10px;
+}
+
+.hero-content-right p{
+    color: var(--primary-color);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    padding: 10px 50px;
+}
+
+.hero-button-container{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 50px 50px;
+}
+
+.hero-button-container button{
+    padding: 5px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: black;
+    font-family: var(--link-font);
+    transition: all 0.5s;
+}
+
+.hero-button-container button:hover{
+    cursor: pointer;
+    padding: 5px 40px;
+    border-color: white;
+    background-color: black;
+    color: white;
+}
