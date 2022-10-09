@@ -32,7 +32,7 @@ const Products = () => {
   const handleMaxPrice = (e) => {
     setMaxPrice(e.target.value);
   }
-  // const filter = items.filter((item) => item.price > 10);
+
   const minmaxFilterProducts = (product) => (
     product.price > minPrice && product.price < maxPrice
   )
@@ -82,7 +82,7 @@ const Products = () => {
             <option value="default">Order by</option>
             <option value="priceAsc">Price (ASC)</option>
             <option value="priceDesc">Price (DESC)</option>
-            <option value="nameAsc">Name</option>
+            <option value="name">Name</option>
           </select>
         </div>
       </div>
@@ -93,9 +93,10 @@ const Products = () => {
                           (a,b)=>a.price-b.price:
                           sortChoise ==="priceDesc" ?
                           (a,b)=>b.price-a.price :
-                          sortChoise ==="nameAsc" ?
+                          sortChoise ==="name" ?
                           (a,b) => {
                             if(a.name.toLowerCase()<b.name.toLowerCase()){return -1}
+                            if(a.name.toLowerCase()>b.name.toLowerCase()){return 1}
                           } : 
                           (a,b)=>a.price-b.price
                     )
