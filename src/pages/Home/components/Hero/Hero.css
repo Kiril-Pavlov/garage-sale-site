@@ -76,3 +76,13 @@
     background-color: black;
     color: white;
 }
+
+@media screen and (max-width:992px){
+    .hero-container{
+        grid-template-columns: 1fr;
+    }
+
+    .hero-logo-left{
+        display: none;
+    }
+}
