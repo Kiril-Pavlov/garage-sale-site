@@ -1,0 +1,49 @@
+.about-container{
+    background-image: url("../../assets/about-repeat-bg.jpg");
+    padding: 30px 10%;
+
+}
+
+.about-title{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 3rem;
+    font-family: var(--link-font);
+    text-shadow: 10px 10px 10px var(--primary-color);
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+}
+
+.about-section-one,
+.about-section-two{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.section-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-img img{
+    width: 100%;
+    box-shadow: 10px 10px 20px black;
+}
+
+.section-text{
+    font-family: var(--text-font);
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    font-weight: 600;
+}
+
