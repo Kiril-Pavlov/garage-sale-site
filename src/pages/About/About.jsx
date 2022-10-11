@@ -29,7 +29,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className='about-section-one'>
+        <div className='about-section-two'>
           <div className='section-text'>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui sapiente 
               voluptatibus fugit labore assumenda porro. Reprehenderit accusantium 

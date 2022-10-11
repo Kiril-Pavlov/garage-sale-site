@@ -1,10 +1,9 @@
-.about-container{
+.about-container {
     background-image: url("../../assets/about-repeat-bg.jpg");
     padding: 30px 10%;
-
 }
 
-.about-title{
+.about-title {
     text-align: center;
     padding-bottom: 20px;
     font-size: 3rem;
@@ -12,31 +11,31 @@
     text-shadow: 10px 10px 10px var(--primary-color);
 }
 
-.about-content{
+.about-content {
     display: flex;
     flex-direction: column;
     grid-gap: 20px;
 }
 
 .about-section-one,
-.about-section-two{
+.about-section-two {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
 }
 
-.section-img{
+.section-img {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.section-img img{
+.section-img img {
     width: 100%;
     box-shadow: 10px 10px 20px black;
 }
 
-.section-text{
+.section-text {
     font-family: var(--text-font);
     text-align: justify;
     display: flex;
@@ -47,3 +46,24 @@
     font-weight: 600;
 }
 
+@media screen and (max-width:992px) {
+    .about-container {
+        padding: 20px 5%;
+    }
+
+    .about-title {
+        padding-bottom: 15px;
+        font-size: 2rem;
+    }
+
+    .about-section-one {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .about-section-two{
+        display: flex;
+        flex-direction: column-reverse;
+        grid-gap: 10px;
+    }
+}
