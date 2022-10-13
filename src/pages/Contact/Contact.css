@@ -1,0 +1,82 @@
+.contact-container{
+    background-color: var(--primary-color);
+}
+
+h2{
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--link-font);
+    padding: 30px;
+}
+
+.form-info-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px 15%;
+    grid-gap: 20px;
+}
+
+.contact-form{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: row;
+    grid-gap: 20px;
+    padding-bottom: 20px;
+    color: white;
+    align-items: center;
+}
+
+.form-row label{
+    font-family: var(--text-font);
+    font-size: 1.2rem;
+}
+
+.form-row input{
+    width: 70%;
+    font-size: 1rem;
+    padding: 3px 10px;
+    border-radius: 30px;
+}
+
+.form-textarea{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    color: white;
+}
+
+.form-textarea label{
+    font-family: var(--text-font);
+    font-size: 1.2rem;
+}
+
+.form-textarea textarea{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.form-btn button{
+    padding: 5px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-family: var(--link-font);
+    transition: all 0.5s;
+}
+
+.form-btn button:hover{
+    background-color: var(--primary-color);
+    padding: 5px 40px;
+    cursor: pointer;
+}
