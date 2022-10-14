@@ -21,10 +21,10 @@ const Contact = () => {
             </div>
             <div className='form-textarea'>
               <label htmlFor="">Enter your message here</label>
-              <textarea name="" id="" cols="30" rows="10">Message here ...</textarea>
+              <textarea name="" id="" cols="30" rows="10" placeholder='Message here ...'></textarea>
             </div>
             <div className='form-btn'>
-              <button>Submit</button>
+              <button onClick={alert("Nothing sent. Just testing.")}>Submit</button>
             </div>
           </form>
         </div>
@@ -39,7 +39,7 @@ const Contact = () => {
         </div>
       </div>
       <div className='google-maps-location'>
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d40639121.22750176!2d-5.5396051622426015!3d51.560623173267295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smk!4v1665762902090!5m2!1sen!2smk" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   )
