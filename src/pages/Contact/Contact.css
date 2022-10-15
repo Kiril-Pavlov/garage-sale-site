@@ -105,3 +105,29 @@ h2{
     height: 300px;
 }
 
+@media screen and (max-width:992px){
+    h2{
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    .form-info-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0px 5%;
+        grid-gap: 10px;
+    }
+
+    .form-row{
+        flex-direction: column;
+        grid-gap: 10px;
+    }
+
+    .form-row input{
+        width: 100%;
+    }
+
+    .form-textarea label{
+        text-align: center;
+    }
+}
