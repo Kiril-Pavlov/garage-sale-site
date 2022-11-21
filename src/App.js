@@ -21,6 +21,11 @@ function App() {
     { linkTo: "/cartpage", linkName: "Cart" },
     { linkTo: "/contact", linkName: "Contact" },
   ];
+
+  const cartItems = [
+
+  ]
+
   return (
     <div className="App">
       <Header links = {linksList}/>
@@ -28,7 +33,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/products' element={<Products/>}/>
+        <Route path='/products' element={<Products cartItems={cartItems}/>}/>
         <Route path='/cartpage' element={<CartPage/>}/>
         <Route path='/contact' element={<Contact/>}/>
       </Routes>

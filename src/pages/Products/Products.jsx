@@ -7,7 +7,7 @@ import { productList } from '../../testData/productList'
 
 import "./Products.css"
 
-const Products = () => {
+const Products = ({cartItems}) => {
   const [searchInput, setSearchInput] = useState("");
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(Infinity);
@@ -47,6 +47,17 @@ const Products = () => {
         (a,b)=>a.price-b.price
       )
     }
+  }
+
+  const addToCart = (item) => {
+    console.log(item.id)
+    cartItems.push({
+      id:item.id,
+      name:item.name,
+      price:item.price,
+      img:item.img
+    })
+    console.log("cart",cartItems)
   }
 
 
@@ -108,7 +119,7 @@ const Products = () => {
               <div className='product-description'>{item.description}</div>
               <div className='price-add-to-cart-container'>
                 <div className='product-price'>${item.price}</div>
-                <button className='product-add-button'> ADD TO CART</button>
+                <button className='product-add-button' onClick={()=>addToCart(item)}> ADD TO CART</button>
               </div>
             </div>
           )
